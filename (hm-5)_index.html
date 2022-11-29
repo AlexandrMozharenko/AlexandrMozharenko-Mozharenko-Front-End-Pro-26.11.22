@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const yearOfBirth = +prompt('Ваш рік народження?');
+        const curCity = prompt('Ваше місто проживання?');
+        const favSport = prompt('Ваш улюблений вид спорту?');
+
+        let yearMessage;
+        let curMessage;
+        let favMessage;
+
+        if (yearOfBirth === 0) {
+            yearMessage = 'Шкода, що Ви не захотіли ввести свій рік народження';
+        }
+        else {
+            yearMessage = 2022 - yearOfBirth;
+        }
+
+        if ((curCity === 'Київ') || (curCity === 'Лондон') || (curCity === 'Мадрид') || (curCity === 'Вашингтон') || (curCity === 'Варшава')) {
+            curMessage = 'Ти живеш у столиці ' + curCity;
+        }
+        else if (curCity === '') {
+            curMessage = 'Шкода, що Ви не захотіли ввести своє місто проживання';
+        }
+        else {
+            curMessage = 'Ти живеш у місті ' + curCity;
+        }
+
+        switch (favSport){
+            case 'Футбол':
+                favMessage = 'Круто! Хочеш стати Андрієм Шевченко?';
+                break;
+            case 'Стрільба з лука':
+                favMessage = 'Круто! Хочеш стати Віктором Рубаном?';
+                break;
+            case 'Баскетбол':
+                favMessage = 'Круто! Хочеш стати Майклом Джорданом?';
+                break;
+            default:
+                favMessage = 'Шкода, що Ви не захотіли ввести свій улюблений вид спорту';
+                break;
+        }
+
+        alert(yearMessage + '\n' + curMessage + '\n' + favMessage);
+    </script>
+</body>
+</html>
