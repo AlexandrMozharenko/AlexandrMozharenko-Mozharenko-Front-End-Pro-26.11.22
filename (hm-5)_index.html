@@ -26,7 +26,7 @@
         if ((curCity === 'Київ') || (curCity === 'Лондон') || (curCity === 'Мадрид') || (curCity === 'Вашингтон') || (curCity === 'Варшава')) {
             curMessage = 'Ти живеш у столиці ' + curCity;
         }
-        else if (curCity === '') {
+        else if ((curCity === null) || (curCity === '')) {
             curMessage = 'Шкода, що Ви не захотіли ввести своє місто проживання';
         }
         else {
