@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+    const n1 = +prompt("Ваше ціле число");
+    let message = 1;
+
+    if (n1 <= 0) {
+        alert  ('Введіть число більше 0');
+    }
+
+    for (let i = 1; i <= n1; i++) {
+        let number = Number.isInteger(n1/i);
+        if (i != 1 && i != n1 && number === true){
+            message = 2;
+            alert ('Число не просте');
+            break;
+        }
+    }
+
+        if (message === 1){
+            alert ('Число просте');
+        }
+</script>
+</body>
+</html>
