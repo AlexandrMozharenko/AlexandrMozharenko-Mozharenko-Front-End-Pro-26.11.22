@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const n1 = +prompt("Дистанція в метрах");
+        const n2 = +prompt("Дистанція в футах");
+
+        let dist1 = n1 * 1000;
+        let dist2 = n2 *0.305;
+                
+        if (dist1 > dist2) {
+            alert ('Дистанція1 сягає ' + dist1 + 'м. Дистанція2 сягає ' + dist2 + 'м' + '\n' + 'Дистанція1 більше чим Дистанція2 на ' + (dist1-dist2) + 'м.');
+        }
+        else {
+            alert ('Дистанція2 сягає ' + dist2 + 'м. Дистанція1 сягає ' + dist1 + 'м' + '\n' + 'Дистанція2 більше чим Дистанція1 на ' + (dist2-dist1) + 'м.');
+        }
+    </script>
+</body>
+</html>
