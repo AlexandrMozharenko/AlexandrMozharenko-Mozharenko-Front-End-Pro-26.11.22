@@ -9,10 +9,14 @@
 <body>
     <script type="text/javascript">
         const n1 = +prompt("Ваше перше число?");
-        const n2 = +prompt("Ваше перше число?");
+        const n2 = +prompt("Ваше друге число?");
 
         if (n1 > n2) {
             alert ('Число ' + n1 + ' більше чим число ' + n2 + ' на ' + (n1 - n2));
+        }
+
+        else if (n1 === n2) {
+            alert ('Число ' + n1 + ' дорівнює числу ' + n2 );
         }
         else {
             alert ('Число ' + n1 + ' менше чим число ' + n2 + ' на ' + (n2 - n1));

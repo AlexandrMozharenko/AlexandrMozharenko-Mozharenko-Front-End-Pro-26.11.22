@@ -8,11 +8,11 @@
 </head>
 <body>
     <script type="text/javascript">
-        const n1 = +prompt("Дистанція в метрах");
-        const n2 = +prompt("Дистанція в футах");
+        const numb1 = +prompt("Дистанція в метрах");
+        const numb2 = +prompt("Дистанція в футах");
 
-        let dist1 = n1 * 1000;
-        let dist2 = n2 *0.305;
+        const dist1 = numb1 * 1000;
+        const dist2 = numb2 *0.305;
                 
         if (dist1 > dist2) {
             alert ('Дистанція1 сягає ' + dist1 + 'м. Дистанція2 сягає ' + dist2 + 'м' + '\n' + 'Дистанція1 більше чим Дистанція2 на ' + (dist1-dist2) + 'м.');
