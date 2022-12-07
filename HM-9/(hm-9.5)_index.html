@@ -8,19 +8,19 @@
 </head>
 <body>
     <script type="text/javascript">
-        const n1 = +prompt("Ваше ціле число");
-        let n2 = 1;
-        let n3 = 'false';
+        const value1 = +prompt("Ваше ціле число");
+         const value2 = 1;
+        let value3 = 'false';
         do {
-            n2 = n2 * 3;
-            if (n2 === n1){
+            value2 = value2 * 3;
+            if (value2 === value1){
                 alert('OK');
-                n3 = 'true'
+                value3 = 'true'
                 break;
             }
-        } while (n2 <= n1);
+        } while (value2 <= value1);
 
-        if (n3 === 'false'){
+        if (value3 === 'false'){
             alert('Error');
         }
     </script>

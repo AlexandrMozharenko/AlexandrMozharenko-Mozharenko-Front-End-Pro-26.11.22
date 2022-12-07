@@ -8,16 +8,16 @@
 </head>
 <body>
 <script type="text/javascript">
-    const n1 = +prompt("Ваше ціле число");
+    const value1 = +prompt("Ваше ціле число");
     let message = 1;
 
     if (n1 <= 0) {
         alert  ('Введіть число більше 0');
     }
 
-    for (let i = 1; i <= n1; i++) {
-        let number = Number.isInteger(n1/i);
-        if (i != 1 && i != n1 && number === true){
+    for (let i = 1; i <= value1; i++) {
+        let number = Number.isInteger(value1/i);
+        if (i != 1 && i != value1 && number === true){
             message = 2;
             alert ('Число не просте');
             break;
