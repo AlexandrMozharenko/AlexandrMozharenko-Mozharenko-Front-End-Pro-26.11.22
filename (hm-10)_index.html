@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const dimens = +prompt("Оберіть довжину масива");
+
+        let arr = [ ];
+        for (let i = 0; i < dimens; i++) {
+            let value = parseInt(prompt("Введіть елемент масива " + (i + 1)));
+            arr.push (value);
+        }
+        document.write ("<p>" + "Довжина вашого масиву становить - " + dimens + " елемента(ів)" + "</p>");
+        document.write ("<p>" + "Введений вами масив - " + arr + "</p>");
+        arr.sort((a, b) => a - b);
+        document.write ("<p>" + "Відсортований за зростанням масив - " + arr + "</p>");
+        arr.splice(2, 2);
+        document.write ("<p>" + "Масив з видаленими елементами - "+ arr + "</p>");
+    </script>
+</body>
+</html>
