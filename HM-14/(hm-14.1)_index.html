@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const array = prompt("Введіть елементи через пробіл").split(' ') ;
+        console.log(array)
+        let convertArray = []
+        let number = []
+        let medArifm = (array) => {
+            for (let i = 0; i < array.length; i++) {
+                convertArray = array.map(Number);
+                number = convertArray.filter(Number);
+            }  
+            console.log(number);
+            let result = number.reduce(function(sum, Element) {
+                return sum + Element;
+            }, 0);
+            console.log (result/number.length);
+        }
+        medArifm(array)
+    </script>
+</body>
+</html>

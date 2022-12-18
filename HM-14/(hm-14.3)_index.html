@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const dimensX = +prompt('Введіть розмір масиву X');
+        const dimensY = +prompt('Введіть розмір масиву Y');
+
+        let dobledimensArr = (dimensX, dimensY) => {
+            let elemArray = new Array(dimensX); 
+            for (let i = 0; i < dimensX; i++) {
+                elemArray[i] = new Array(dimensY); 
+                
+                for(let a = 0; a < dimensY; a++) {
+                    let value = prompt("Введіть елемент масива " + (a + 1));
+                    elemArray[i][a] = (value);
+                } 
+            }           
+            console.log(elemArray); 
+        }
+        dobledimensArr(dimensX, dimensY)
+    </script>
+</body>
+</html>

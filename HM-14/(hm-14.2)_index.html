@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valueX = +prompt('Введіть перше значення');
+        let valueY = +prompt('Введіть друге значення');
+        let znak = prompt("Оберіть операцію яку хочете зробити с числами \n Додавання - [ + ] \n Віднімання - [ - ] \n Множення - [ * ] \n Ділення - [ / ] \n Ділення без останку - [ % ] \n Зведення в ступінь - [ ^ ] ");
+        doMath(valueX, valueY, znak);
+
+        function doMath (valueX, valueY, znak) {
+            switch (znak) {
+                case '+':
+                    alert(valueX + ' + ' + valueY + ' = ' + valueX + valueY);
+                    break;
+                case '-':
+                    alert(valueX + ' - ' + valueY + ' = ' + valueX - valueY);
+                    break;
+                case '*':
+                    alert(valueX + ' * ' + valueY + ' = ' + valueX * valueY);
+                    break;
+                case '/':
+                    alert(valueX + ' / ' + valueY + ' = ' + valueX / valueY);
+                    break;
+                case '%':
+                    alert(valueX + ' % ' + valueY + ' = ' + valueX % valueY);
+                    break;
+                case '^':
+                    alert(valueX + ' ^ ' + valueY + ' = ' + valueX ** valueY);
+                    break;
+                default:
+                    alert('Введіть символ із перерахованих');
+                    break;
+            }
+        }   
+    </script>
+</body>
+</html>
