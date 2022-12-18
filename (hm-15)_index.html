@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const num = +prompt('Введіть ваше число');
+        const degree = +prompt('Введіть ступінь числа');
+        
+        function pow ( num, degree ) {
+            let result = 1;
+            for (let i = 0; i < degree; i++) {
+                result = result * num;
+              }
+              return result;
+              console.log(result);
+            } 
+            console.log(pow (num, degree))
+      </script> 
+</body>
+</html>
