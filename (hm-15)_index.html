@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +10,17 @@
 <body>
     <script type="text/javascript">
         const num = +prompt('Введіть ваше число');
-        const degree = +prompt('Введіть ступінь числа');
-        
-        function pow ( num, degree ) {
-            let result = 1;
-            for (let i = 0; i < degree; i++) {
-                result = result * num;
-              }
-              return result;
-              console.log(result);
+        const degree = +prompt('Введіть ступінь числа');         
+
+        function pow(num, degree) {
+            if (degree === 1) {
+                return num;
             } 
-            console.log(pow (num, degree))
+            else {
+                return num * pow(num, degree -1);
+            }
+        }
+        alert (pow(num, degree))
       </script> 
 </body>
 </html>
