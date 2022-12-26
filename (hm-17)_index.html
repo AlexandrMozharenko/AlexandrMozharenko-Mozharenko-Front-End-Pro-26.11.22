@@ -8,16 +8,18 @@
 </head>
 <body>
     <script>
-        let repeat = +prompt('Ведите количество повторений');
+        const repeat = +prompt('Ведите количество повторений');
         let res = 0;
 
         for (let i = 1; i <= repeat; i++){
             let x = +prompt("Введіть значення:");
-            x = x + res;
-            result(x);
-        }
-        function result(x){
-           console.log(x)
+            
+            const result = (x) => {
+                return (res) => {
+                    return x + res
+                }
+            }
+            console.log (result(x)(res))
             res = x;
         }
     </script>
