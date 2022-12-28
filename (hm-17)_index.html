@@ -7,22 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        const repeat = +prompt('Ведите количество повторений');
-        let res = 0;
+    <script type="text/javascript">    
+        function result(x) {
+            let sum = 0;
+            return function(y) {
+                sum += y;
+                return sum
+            };
+        };
+let value1 = result(0);
+const userArrlength = +prompt("Введіть довжину масива");
+let userArr = [];
 
-        for (let i = 1; i <= repeat; i++){
-            let x = +prompt("Введіть значення:");
-            
-            const result = (x) => {
-                return (res) => {
-                    return x + res
-                }
-            }
-            console.log (result(x)(res))
-            res = x;
-        }
-    </script>
-    
+for (let i = 0; i < userArrlength; i++) {
+    const userNumber = +prompt ("Введіть ваше значення");
+    userArr = [...userArr, userNumber]
+}
+userArr.map(num => {
+    console.log (value1(num));
+})
+    </script>    
 </body>
 </html>
