@@ -88,32 +88,3 @@ function carsQuestion(message, carIndex){
 
     return result
 }
-
-// function outputData(datOutput, cOwner, cars1, garage1, cQuant){
-//     switch (datOutput) {
-//         case 1:
-//             console.log(cOwner, cars1, garage1);
-//             break;
-//         case 2:
-//             alert('Ім`я: ' + cOwner.name + '\n' +
-//                 'Вік: ' + cOwner.age +  '\n' +
-//                 'Кількість машин: ' + cQuant + '\n' +
-//                 'Бренд: ' + cars1[0].brand + '\n' +
-//                 'Тип кузову: ' + cars1[0].carcase + '\n' +
-//                 'Колір: ' + cars1[0].color + '\n' +
-//                 'Номер машини: ' + cars1[0].number);
-//             break;
-//         case 3:
-//             document.write('<p>' +'Ім`я: ' + cOwner.name + '<br/>' +
-//             'Вік: ' + cOwner.age + '<br/>' +
-//             'Кількість машин: ' + cQuant + '<br/>' +
-//             'Бренд: ' + cars1[0].brand + '<br/>' +
-//             'Тип кузову: ' + cars1[0].carcase + '<br/>' +
-//             'Колір: ' + cars1[0].color + '<br/>' +
-//             'Номер машини: ' + cars1[0].number + '</p>');
-//             break;
-//         default:
-//             alert('Введіть один із доступних вам варіантів');
-//             break;
-//     }
-// }
