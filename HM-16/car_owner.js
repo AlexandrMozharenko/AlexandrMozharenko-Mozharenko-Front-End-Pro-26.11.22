@@ -6,11 +6,11 @@ function Car (cBrand, cCarcase, cColor, cNumber, cOwner) {
     this.number = cNumber;
     this.owner = cOwner;
 
-    this.showInfo = function() {
-        document.write('<p>' + 'Бренд автомобіля: ' + this.brand + '<br/>' + 
+    this.showCar = function() {
+         document.write('<p>' + 'Бренд автомобіля: ' + this.brand + '<br/>' +
             'Кузов автомобіля: ' + this.carcase + '<br/>' +
             'Колір автомобіля: ' + this.color + '<br/>' +
             'Номер автомобіля: ' + this.number + '<br/>' +
-            'Власник автомобіля: ' + this.owner.name + '</p>'); 
+            'Власник автомобіля: ' + this.owner.name + '</p>');
     };
 }

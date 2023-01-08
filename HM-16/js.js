@@ -1,42 +1,28 @@
- "use strict"
-// Messages 
-const qOwnerMessage = "Введіть кількість людей";
-const cQuantCarsMessage = "Введіть кількість автомобілей";
-
-// Car's messages
-const brandMessage = "Введіть бренд автомобіля ";
-const carcaseMessage = "Введіть тип кузову автомобіля ";
-const colorMessage = "Введіть колір автомобіля ";
-const numberMessage = "Введіть номер автомобіля ";
-
-// Logic
+"use strict"
+let cBrand;
+let cCarcase;
+let cColor;
+let cNumber;
 // Person 1
-let person1 = repQuestion();
-let car1 = createCar(brandMessage, carcaseMessage, colorMessage, numberMessage, person1, 1);
-let car2 = createCar(brandMessage, carcaseMessage, colorMessage, numberMessage, person1, 2);
-const garage1 = new Garage ([person1], [car1, car2]);
-console.log(person1)
-console.log(car1)
+let person1 = createOwner();
+let car1 = createCar(cBrand, cCarcase, cColor, cNumber, person1, 1);
+let car2 = createCar(cBrand, cCarcase, cColor, cNumber, person1, 2);
+const garage1 = new Garage (person1, [car1, car2]);
 
 // Person 2
-let person2 = repQuestion();
-let car3 = createCar(brandMessage, carcaseMessage, colorMessage, numberMessage, person2, 1);
-const garage2 = new Garage ([person2], [car3]);
+let person2 = createOwner();
+let car3 = createCar(cBrand, cCarcase, cColor, cNumber, person2, 1);
+const garage2 = new Garage (person2, [car3]);
 
-let repQuestionPrompt;
+let createOwnerPrompt;
 do {
-    repQuestionPrompt = prompt("Бажаєте ввести інформацію?" + '\n' + 'Так?' + '\n' + 'Ні?');
+    createOwnerPrompt = prompt("Бажаєте ввести інформацію?" + '\n' + 'Так?' + '\n' + 'Ні?');
 }
-while (repQuestionPrompt !== 'Так' && repQuestionPrompt !== 'Ні') 
-    switch (repQuestionPrompt) {
+while (createOwnerPrompt !== 'Так' && createOwnerPrompt !== 'Ні') 
+    switch (createOwnerPrompt) {
       case "Так":
-        person1.showInfo();
-        car1.showInfo();
-        car2.showInfo();
-        garage1.showInfo();
-        person2.showInfo();
-        car3.showInfo();
-        garage2.showInfo();
+        garage1.showGarage();
+        garage2.showGarage();
           break;
       case "Ні":
           alert('....');
@@ -44,12 +30,11 @@ while (repQuestionPrompt !== 'Так' && repQuestionPrompt !== 'Ні')
       default:
           break;
   }
-
-function repQuestion () {
+function createOwner () {
     let pName;
     do {
         pName = prompt("Введіть ваше ім'я та прізвище");
-    } while (pName === '' ||  pName === null)
+    } while (pName === '' || pName === null)
 
     let pAge;
     do {
@@ -69,14 +54,13 @@ function promptMessage(message){
     return number;
 }
 
-function createCar(brandMessage, carcaseMessage, colorMessage, numberMessage, owner, carIndex){
-    let cBrand = carsQuestion(brandMessage, carIndex);
-    let cCarcase = carsQuestion(carcaseMessage, carIndex);
-    let cColor = carsQuestion(colorMessage, carIndex);
-    let cNumber = carsQuestion(numberMessage, carIndex);
+function createCar(cBrand, cCarcase, cColor, cNumber, cOwner, carIndex){
+    cBrand = carsQuestion("Введіть бренд автомобіля ", carIndex);
+    cCarcase = carsQuestion("Введіть тип кузову автомобіля ", carIndex);
+    cColor = carsQuestion("Введіть колір автомобіля ", carIndex);
+    cNumber = carsQuestion("Введіть номер автомобіля ", carIndex);
 
-    let newCar = new Car(cBrand, cCarcase, cColor, cNumber, owner);
-
+    let newCar = new Car(cBrand, cCarcase, cColor, cNumber, cOwner);
     return newCar;
 }
 
