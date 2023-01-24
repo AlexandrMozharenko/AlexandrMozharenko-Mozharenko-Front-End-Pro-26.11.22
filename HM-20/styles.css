@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+}
+.container p {
+    padding: 5px 10px;
+}
+
+.category-item {
+    background: #343333;
+    color: orange;
+    flex-grow: 1;
+    border: 1px solid;
+    width: 100%;
+}
+
+.category-item:nth-child(-n+2) {
+    text-align: center;
+}
+
+.categories p:hover,
+.products p:hover {
+    background: black;
+}
+
+.btnBuy {
+    margin: 10px 0 10px 30px;
+    padding: 5px 15px;
+}
+
+.forForm label,input,select {
+    display: block;
+}
