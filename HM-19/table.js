@@ -44,30 +44,34 @@ const showDetails = ({target}) => {
 
     const makeOrderButtonElem = document.createElement('button');
     const product = findProducts(DATA, +categoryId, productId);
-    const details = product[productId];
 
-    Object.keys(product).forEach((elem) => {
-        const detailDiv = document.createElement('p');
-        detailDiv.className = 'goods inf';
-        detailDiv.textContent = product[elem];
-        detailsElem.appendChild(detailDiv);
-    });
-    const infAboutBuy = () => {
-        alert('Товар куплений');
-        const childElem = document.getElementsByClassName('goods')
+    this.showProductDetails(product, detailsElem);
 
-        for (let i = 0; i < childElem.length; i+1) {
-            childElem[i].remove()
-        }
-
-        const btnQuant = document.getElementsByClassName('btnBuy');
-        for (let i = 0; i < btnQuant.length; i++) {
-            btnQuant[i].remove()
-        }
-    }
     const btn = document.createElement('button')
     makeOrderButtonElem.onclick = infAboutBuy;
     makeOrderButtonElem.textContent = 'Buy';
     makeOrderButtonElem.className = 'btnBuy';
     detailsElem.appendChild(makeOrderButtonElem);
 };
+
+function showProductDetails(product, detailsElem){
+    Object.keys(product).forEach((elem) => {
+        const detailDiv = document.createElement('p');
+        detailDiv.className = 'inf';
+        detailDiv.textContent = product[elem];
+        detailsElem.appendChild(detailDiv);
+    });
+}
+
+function infAboutBuy(){
+    alert('Товар куплений');
+    const childElems = document.querySelectorAll('.goods');
+    const infChilds = document.querySelectorAll('.inf');
+
+    cycle(childElems);
+    cycle(infChilds);
+
+    const btnQuant = document.querySelector('.btnBuy');
+    btnQuant.remove();
+}
+

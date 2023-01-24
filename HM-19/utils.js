@@ -15,3 +15,8 @@ const findProducts = (data, categoryId, productId = null) => {
 
     return products;
 };
+const cycle = (childElems) => {
+    for (const childElem of childElems) {
+        childElem.remove();
+    }
+}
