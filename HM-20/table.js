@@ -62,7 +62,7 @@ function showProductDetails(product, detailsElem){
     });
 }
 
-function infAboutBuy(){
+const infAboutBuy = () => {
     const childElems = document.querySelectorAll('.goods');
     const infChildren = document.querySelectorAll('.inf');
     cycle(childElems);

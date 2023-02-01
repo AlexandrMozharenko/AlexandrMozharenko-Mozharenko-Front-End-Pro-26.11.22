@@ -31,7 +31,7 @@ const FORM_CONFIG = [
         tagName: 'label',
         attributes: {id: 'usermailLabel', for: 'mail'}, content: 'Введіть № відділення Нової пошти вашого міста',
         inputs: [
-            {attributes: {placeholder: '№ відділення', id:'mail', required: 'required'}},
+            {attributes: {placeholder: '№ відділення', id:'mail', required: 'required', name: 'userMail'}},
         ],
     },
     {

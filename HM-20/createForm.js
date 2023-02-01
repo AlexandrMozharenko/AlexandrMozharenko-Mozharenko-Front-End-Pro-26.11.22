@@ -12,14 +12,12 @@ const formOperations = (form) => {
                 createElements('option', option.attributes, option.events, option.content, currentElement);
             }
         }
-        const testFun = ()=> {
-            console.log('click')
-        }
     }
 }
 const outputInformation = ()=> {
     const infForForm = document.querySelector('.forForm');
-    const userData = document.querySelector('#username').value
+    let form = document.querySelector('form');
+    const userData = form.elements['userData'].value;
     createElements(
         'p',
         {className:'user-data'},
@@ -27,7 +25,7 @@ const outputInformation = ()=> {
         'Ваше ПІБ: ' + userData,
         infForForm
     )
-    const userCity = document.querySelector('.user-cities').value
+    const userCity = form.elements['cities'].value;
     createElements(
         'p',
         {className:'user-city'},
@@ -35,7 +33,7 @@ const outputInformation = ()=> {
         'Ваше місто: ' + userCity,
         infForForm
     )
-    const userMail = document.querySelector('#mail').value
+    const userMail = form.elements['userMail'].value;
     createElements(
         'p',
         {className:'user-mail'},
