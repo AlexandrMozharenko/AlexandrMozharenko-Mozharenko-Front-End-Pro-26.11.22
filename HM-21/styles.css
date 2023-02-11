@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+}
+.container p {
+    padding: 5px 10px;
+}
+
+.principal-information {
+    display: flex;
+}
+
+.filter {
+    flex-grow: 1;
+    padding: 20px 0;
+}
+
+.user-goods {
+    margin: 0px 20px 20px 20px;
+    padding: 50px 0;
+}
+
+.category-item {
+    background: #343333;
+    color: orange;
+    flex-grow: 1;
+    border: 1px solid;
+    width: 100%;
+}
+
+.category-item:nth-child(-n+2) {
+    text-align: center;
+}
+
+.categories p:hover,
+.products p:hover {
+    background: black;
+}
+
+.btnBuy {
+    margin: 10px 0 10px 30px;
+    padding: 5px 15px;
+}
+
+.forForm label,input,select {
+    display: block;
+}
+
+/*Замовлення*/
+#cont-of-selected-products {
+    margin: 10px 20px;
+    padding: 10px 20px;
+}
+
+.cont-for-products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-goods {
+    margin: 5px 20px;
+    padding: 2px 7px;
+}
+.usr-prod {
+    margin: 5px 12px;
+    padding: 3px 8px;
+    transition: 0.7s;
+}
+
+.usr-prod:hover {
+    box-shadow: 3px 5px 8px black;
+    transition: 0.3s;
+}
+
+.del-product-btn {
+    padding: 1px 5px;
+    font-size: 15px;
+    background: orange;
+    color: black;
+    transition: 0.7s;
+}
+
+.del-product-btn:hover {
+    border-radius: 2px 2px;
+    box-shadow: 3px 5px 5px black;
+    transition: 0.3s;
+}
