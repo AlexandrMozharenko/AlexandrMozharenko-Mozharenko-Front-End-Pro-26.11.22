@@ -30,19 +30,26 @@ const displayProducts = (products) => {
         };
 
         newProd.onclick = () => {
-            let i = products.findIndex(elem => elem.name === newProd.textContent);
-            const detailsTag = document.createElement('div');
-            for (let item in products[i]) {
-                if (item !== 'id' && item !== 'name') {
-                    const elemTag = document.createElement('p');
-                    elemTag.textContent = products[i][item];
-                    detailsTag.appendChild(elemTag);
-                }
-            }
-            detailsTag.className = 'selected-product-inf';
-            divElem.appendChild(detailsTag);
+            clearElements(['forForm']);
+            displayProductInfo(usrProduct);
         }
-    });
 
+    });
 }
+    const displayProductInfo = (usrProduct) => {
+        const forForm = document.querySelector('.forForm');
+        const contForElem = document.createElement('div');
+        contForElem.className = 'cont-for-elem'
+        forForm.appendChild(contForElem)
+        for (const [key, value] of Object.entries((usrProduct))) {
+            if (key !== 'id' && key  !== 'name') {
+                createElements(
+                    'p',
+                    {className: 'prod-descr-elem'},
+                    null,
+                    `${key}: ${value}`,
+                    contForElem
+                );
+            }}
+    }
 

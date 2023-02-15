@@ -67,10 +67,14 @@ const infAboutBuy = (product) => ()=> {
     const btnQuant = document.querySelector('.btnBuy');
     btnQuant.remove();
 
-    const container = document.querySelector('.container');
-    const form = createElements('form', {className:'userForm'}, null, '', container);
-    formOperations(form);
+    const container= document.querySelector('.container');
+    const containerForm = document.createElement('div');
+    containerForm.className = 'cont-for-form';
+    container.appendChild(containerForm);
+    clearElements(['cont-for-form']);
 
+    const form = createElements('form', {className:'userForm'}, null, '', containerForm);
+    formOperations(form);
     const products = JSON.parse(localStorage.getItem('product')) || []
     products.push(product)
     localStorage.setItem('product', JSON.stringify(products))

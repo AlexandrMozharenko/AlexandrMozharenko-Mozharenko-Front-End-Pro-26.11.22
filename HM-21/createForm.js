@@ -15,6 +15,7 @@ const formOperations = (form) => {
     }
 }
 const outputInformation = ()=> {
+    clearElements(['forForm']);
     const infForForm = document.querySelector('.forForm');
     let form = document.querySelector('form');
     const userData = form.elements['userData'].value;
